@@ -17,6 +17,9 @@ def analytics(request):
 def content_calender(request):
     return render(request, 'content_calendar.html')
 
+def create_content(request):
+    return render(request, 'create_content.html')
+
 def dashboard(request):
     return render(request, 'dashboard.html')
 
