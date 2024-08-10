@@ -1,0 +1,38 @@
+body {
+    font-family: 'Tahoma', sans-serif;
+    background-color: #000000;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.container {
+    margin-top: 60px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .navbar {
+        background-color: #000000;
+    }
+
+    .card {
+        background-color: #1c1c1c;
+        color: #ffffff;
+    }
+
+}
