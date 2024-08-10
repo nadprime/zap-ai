@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ZapAI Generator
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1>Create Content</h1>
+    <p>Use our powerful AI tools to generate and enhance your social media content.</p>
+    <!-- Form to create content -->
+    <form>
+        <div class="form-group">
+            <label for="contentTitle">Content Title</label>
+            <input type="text" class="form-control" id="contentTitle" placeholder="Enter content title">
+        </div>
+        <div class="form-group">
+            <label for="contentBody">Content Body</label>
+            <textarea class="form-control" id="contentBody" rows="5" placeholder="Enter content body"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="contentImage">Upload Image</label>
+            <input type="file" class="form-control-file" id="contentImage">
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+
+{% endblock %}
