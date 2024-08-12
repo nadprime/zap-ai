@@ -15,4 +15,9 @@ urlpatterns = [
     path('feedback/', views.real_time_feedback, name='real_time_feedback'),
     path('settings/', views.settings, name='settings'),
     path('collaboration/', views.team_collaboration, name='team_collaboration'),
+    path('register/', views.register, name='register'),
+    path('about/', views.about, name='about'),
+    path('script/', views.script_generator, name='script_generator'),
+    path('xpost/', views.xpostgen, name='xpostgen'),
+    path('instabio/', views.instabiogen, name='instabiogen'),
 ]
