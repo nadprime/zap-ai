@@ -1,9 +1,15 @@
+from django.shortcuts import render, redirect
+from django.http import JsonResponse
+
+from django.contrib import auth
+from django.contrib.auth.models import User
+from .models import Chat
+
+from django.utils import timezone
+
 import google.generativeai as genai
 import os
 import markdown
-from django.shortcuts import render, redirect
-from django.http import JsonResponse
-from django.utils import timezone
 
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
@@ -30,13 +36,18 @@ def blog_maker(request):
         history=[
         ]
     )
+    # if not request.user.is_authenticated:
+    #     return redirect('login')
+    # chats = Chat.objects.filter(user=request.user)
     chats=""
     if request.method == 'POST':
         message = request.POST.get('message')
         response = chat_session.send_message(message)
-        print(markdown.markdown(response.text))
+        # chat = Chat(user=request.user, message=message, response=markdown.markdown(response.text), created_at=timezone.now())
+        # chat.save()
         return JsonResponse({'message': message, 'response': markdown.markdown(response.text)})
     return render(request, 'blog_maker.html', {'chats': chats})
+
 
 def landing_page(request):
     return render(request, 'landing_page.html')
