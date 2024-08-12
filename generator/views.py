@@ -23,7 +23,7 @@ def index(request):
     return render(request, 'generator/index.html')
 
 @login_required
-def blog_maker(request):
+def bloggen(request):
     INSTRUCTIONS=(
         "You're an Blog Post Generator."
         "Your responses should be in a professional tone."
@@ -52,7 +52,7 @@ def blog_maker(request):
         # chat = Chat(user=request.user, message=message, response=markdown.markdown(response.text), created_at=timezone.now())
         # chat.save()
         return JsonResponse({'message': message, 'response': markdown.markdown(response.text)})
-    return render(request, 'generator/blog_maker.html', {'chats': chats})
+    return render(request, 'generator/bloggen.html', {'chats': chats})
 
 
 @login_required
@@ -67,50 +67,74 @@ def xpostgen(request):
 def instabiogen(request):
     return render(request, 'generator/instabiogen.html')
 
+
+@login_required
+def articlewriter(request):
+    return render(request, 'generator/articlewriter.html')
+
+
+@login_required
+def businessgen(request):
+    return render(request, 'generator/businessgen.html')
+
+
+@login_required
+def copywriter(request):
+    return render(request, 'generator/copywriter.html')
+
+@login_required
+def email(request):
+    return render(request, 'generator/email.html')
+
+@login_required
+def grammarcheck(request):
+    return render(request, 'generator/grammarcheck.html')
+
+@login_required
+def instacal(request):
+    return render(request, 'generator/instacal.html')
+
+@login_required
+def instapostgen(request):
+    return render(request, 'generator/instapostgen.html')
+
+@login_required
+def proddesc(request):
+    return render(request, 'generator/proddesc.html')
+
+@login_required
+def research(request):
+    return render(request, 'generator/research.html')
+
+@login_required
+def smidea(request):
+    return render(request, 'generator/smidea.html')
+
+@login_required
+def taggen(request):
+    return render(request, 'generator/taggen.html')
+
+@login_required
+def websumm(request):
+    return render(request, 'generator/websumm.html')
+
+@login_required
+def writestyle(request):
+    return render(request, 'generator/writestyle.html')
+
+@login_required
+def xcal(request):
+    return render(request, 'generator/xcal.html')
+
+@login_required
+def ytdesc(request):
+    return render(request, 'generator/ytdesc.html')
+
 def landing_page(request):
     return render(request, 'generator/landing_page.html')
 
 def about(request):
     return render(request, 'generator/about.html')
-
-@login_required
-def ai_suggestions(request):
-    return render(request, 'generator/ai_suggestions.html')
-
-@login_required
-def analytics(request):
-    return render(request, 'generator/analytics.html')
-
-@login_required
-def content_calender(request):
-    return render(request, 'content_calendar.html')
-
-@login_required
-def create_content(request):
-    return render(request, 'create_content.html')
-
-@login_required
-def dashboard(request):
-    return render(request, 'generator/dashboard.html')
-
-def help_center(request):
-    return render(request, 'help_center.html')
-
-@login_required
-def monetization_insights(request):
-    return render(request, 'monetization_insights.html')
-
-@login_required
-def real_time_feedback(request):
-    return render(request, 'real_time_feedback.html')
-
-@login_required
-def settings(request):
-    return render(request, 'settings.html')
-
-@login_required
-def team_collaboration(request):
-    return render(request, 'team_collaboration.html')
 
 
 def register(request):

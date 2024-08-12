@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block title %}
-ZapAI Generator
+Dashboard
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,8 @@ ZapAI Generator
 <h1 class="text-center mt-4">Welcome to ZapAI</h1>
 {% comment %} <h4 class="text-center mt-4">Dashboard</h4> {% endcomment %}
 
-<div class="container mt-5">
+<div class="container mt-5 pb-5">
+    <h3>Content Creation Tools</h3>
   <div class="row row-cols-1 row-cols-md-4 g-4">
 
       <!-- Card 1 -->
@@ -22,263 +23,269 @@ ZapAI Generator
           <div class="card h-100 text-center" style="border: 1px solid #fff;">
               <div class="card-body">
                   <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
+                      <i class="bi bi-substack" style="font-size: 2rem; color: #007bff;"></i>
                   </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <h5 class="card-title">Blog Generator</h5>
+                  <a href="{% url 'bloggen'%}" class="btn btn-primary">Create</a>
               </div>
           </div>
       </div>
       
-      <!-- Card 1 -->
+      <!-- Card 2 -->
       <div class="col">
           <div class="card h-100 text-center" style="border: 1px solid #fff;">
               <div class="card-body">
                   <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
+                      <i class="bi bi-youtube" style="font-size: 2rem; color: #007bff;"></i>
                   </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <h5 class="card-title">Youtube Description Generator</h5>
+                  <a href="{% url 'ytdesc'%}" class="btn btn-primary">Create</a>
               </div>
           </div>
       </div>
       
-      <!-- Card 1 -->
+      <!-- Card 3 -->
       <div class="col">
           <div class="card h-100 text-center" style="border: 1px solid #fff;">
               <div class="card-body">
                   <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
+                      <i class="bi bi-envelope-at" style="font-size: 2rem; color: #007bff;"></i>
                   </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <h5 class="card-title">Email Writing Tool</h5>
+                  <a href="{% url 'email'%}" class="btn btn-primary">Create</a>
               </div>
           </div>
       </div>
       
-      <!-- Card 1 -->
+      <!-- Card 4 -->
       <div class="col">
           <div class="card h-100 text-center" style="border: 1px solid #fff;">
               <div class="card-body">
                   <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
+                      <i class="bi bi-pencil-square" style="font-size: 2rem; color: #007bff;"></i>
                   </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <h5 class="card-title">Writing Style Modifier</h5>
+                  <a href="{% url 'writestyle'%}" class="btn btn-primary">Create</a>
               </div>
           </div>
       </div>
       
-      <!-- Card 1 -->
+      <!-- Card 5 -->
       <div class="col">
           <div class="card h-100 text-center" style="border: 1px solid #fff;">
               <div class="card-body">
                   <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
+                      <i class="bi bi-pen" style="font-size: 2rem; color: #007bff;"></i>
                   </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <h5 class="card-title">Copywriting Assistant</h5>
+                  <a href="{% url 'copywriter'%}" class="btn btn-primary">Create</a>
               </div>
           </div>
       </div>
       
-      <!-- Card 1 -->
+      <!-- Card 6 -->
       <div class="col">
           <div class="card h-100 text-center" style="border: 1px solid #fff;">
               <div class="card-body">
                   <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
+                      <i class="bi bi-blockquote-left" style="font-size: 2rem; color: #007bff;"></i>
                   </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
+                  <h5 class="card-title">Plagiarism-Free Article Writer</h5>
+                  <a href="{% url 'articlewriter'%}" class="btn btn-primary">Create</a>
               </div>
           </div>
       </div>
       
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- Card 1 -->
-      <div class="col">
-          <div class="card h-100 text-center" style="border: 1px solid #fff;">
-              <div class="card-body">
-                  <div class="mb-3">
-                      <i class="bi bi-star-fill" style="font-size: 2rem; color: #007bff;"></i>
-                  </div>
-                  <h5 class="card-title">Card Title 1</h5>
-                  <a href="#" class="btn btn-primary">Learn More</a>
-              </div>
-          </div>
-      </div>
-
+     
   </div>
 </div>
 
+<div class="container mt-5 pb-5">
+    <h3>Social Media Tools</h3>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+
+      <!-- Card 1 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-instagram" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Instagram Bio Generator</h5>
+                  <a href="{% url 'instabiogen'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-instagram" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Instagram Post Generator</h5>
+                  <a href="{% url 'instapostgen'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-twitter-x" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">X Post Generator</h5>
+                  <a href="{% url 'xpostgen'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 4 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-chat-text"> style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Social Media Content Idea Tool</h5>
+                  <a href="{% url 'smidea'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-instagram" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Instagram Content Calendar Tool</h5>
+                  <a href="{% url 'instacal'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 6 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-twitter-x" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">X Content Calendar Tool</h5>
+                  <a href="{% url 'xcal'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+     
+  </div>
+</div>
+
+
+<div class="container mt-5 pb-5">
+    <h3>Language and Branding Tools</h3>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+
+      <!-- Card 1 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-spellcheck" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">English Grammar Checker</h5>
+                  <a href="{% url 'grammarcheck'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-hash" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Tagline Generator</h5>
+                  <a href="{% url 'taggen'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+         
+  </div>
+</div>
+
+
+<div class="container mt-5 pb-5">
+    <h3>E-commerce and Business Tools</h3>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+
+      <!-- Card 1 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-file-text-fill" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Product Description Generator</h5>
+                  <a href="{% url 'proddesc'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-building-fill-check" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Business Idea Generator</h5>
+                  <a href="{% url 'businessgen'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+         
+  </div>
+</div>
+
+
+<div class="container mt-5 pb-5">
+    <h3>Reserach and Analysis Tools</h3>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+
+      <!-- Card 1 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-globe" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Website Summarizer</h5>
+                  <a href="{% url 'websumm'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="col">
+          <div class="card h-100 text-center" style="border: 1px solid #fff;">
+              <div class="card-body">
+                  <div class="mb-3">
+                      <i class="bi bi-person-fill-check" style="font-size: 2rem; color: #007bff;"></i>
+                  </div>
+                  <h5 class="card-title">Research Assistant</h5>
+                  <a href="{% url 'research'%}" class="btn btn-primary">Create</a>
+              </div>
+          </div>
+      </div>
+         
+  </div>
+</div>
 
 {% endblock %}
