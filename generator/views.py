@@ -20,7 +20,7 @@ genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 @login_required
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'generator/index.html')
 
 @login_required
 def blog_maker(request):
@@ -52,34 +52,34 @@ def blog_maker(request):
         # chat = Chat(user=request.user, message=message, response=markdown.markdown(response.text), created_at=timezone.now())
         # chat.save()
         return JsonResponse({'message': message, 'response': markdown.markdown(response.text)})
-    return render(request, 'blog_maker.html', {'chats': chats})
+    return render(request, 'generator/blog_maker.html', {'chats': chats})
 
 
 @login_required
 def script_generator(request):
-    return render(request, 'script_generator.html')
+    return render(request, 'generator/script_generator.html')
 
 @login_required
 def xpostgen(request):
-    return render(request, 'xpostgen.html')
+    return render(request, 'generator/xpostgen.html')
 
 @login_required
 def instabiogen(request):
-    return render(request, 'instabiogen.html')
+    return render(request, 'generator/instabiogen.html')
 
 def landing_page(request):
-    return render(request, 'landing_page.html')
+    return render(request, 'generator/landing_page.html')
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'generator/about.html')
 
 @login_required
 def ai_suggestions(request):
-    return render(request, 'ai_suggestions.html')
+    return render(request, 'generator/ai_suggestions.html')
 
 @login_required
 def analytics(request):
-    return render(request, 'analytics.html')
+    return render(request, 'generator/analytics.html')
 
 @login_required
 def content_calender(request):
@@ -91,7 +91,7 @@ def create_content(request):
 
 @login_required
 def dashboard(request):
-    return render(request, 'dashboard.html')
+    return render(request, 'generator/dashboard.html')
 
 def help_center(request):
     return render(request, 'help_center.html')
