@@ -42,14 +42,12 @@ def bloggen(request):
         history=[
         ]
     )
-    # if not request.user.is_authenticated:
-    #     return redirect('login')
     # chats = Chat.objects.filter(user=request.user)
     chats=""
     if request.method == 'POST':
         message = request.POST.get('message')
         response = chat_session.send_message(message)
-        # chat = Chat(user=request.user, message=message, response=markdown.markdown(response.text), created_at=timezone.now())
+        # chat = Chat(user=request.user, message=message, response=response.text, created_at=timezone.now())
         # chat.save()
         return JsonResponse({'message': message, 'response': markdown.markdown(response.text)})
     return render(request, 'generator/bloggen.html', {'chats': chats})

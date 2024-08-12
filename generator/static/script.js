@@ -13,14 +13,12 @@ messageForm.addEventListener("submit", (event) => {
   const messageItem = document.createElement("li");
   messageItem.classList.add("message", "sent");
   messageItem.innerHTML = `
-      <div class="message-text">
-          <div class="message-sender">
-              <b>You</b>
-          </div>
-          <div class="message-content">
-              ${message}
-          </div>
-      </div>`;
+      <div class="chat-message mb-3 text-end">
+      <div class="fw-bold text-muted">You</div>
+        <div class="d-flex justify-content-end">
+            <div class="bg-primary text-white p-3 rounded border">${message}</div>
+        </div>
+    </div>`;
   messagesList.appendChild(messageItem);
 
   messageInput.value = "";
@@ -40,15 +38,12 @@ messageForm.addEventListener("submit", (event) => {
       const messageItem = document.createElement("li");
       messageItem.classList.add("message", "received");
       messageItem.innerHTML = `
-      <div class="message-text">
-          <div class="message-sender">
-            <b>AI Chatbot</b>
+        <div class="chat-message mb-3">
+        <div class="fw-bold text-muted">ZapAI</div>
+          <div class="d-flex">
+              <div class="bg-light p-3 rounded border text-black">${response}</div>
           </div>
-          <div class="message-content">
-              ${response}
-          </div>
-      </div>
-        `;
+      </div>`;
       messagesList.appendChild(messageItem);
     });
 });

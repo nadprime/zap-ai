@@ -3,37 +3,50 @@
 
 
 {% block content %}
-{% block header %}{% endblock %}
-<div class="container vh-50 d-flex flex-column">
-  <!-- Chat Window -->
-  <div class="chat-window flex-grow-1 overflow-auto p-3 border rounded">
-      <!-- Chat messages -->
-      <div class="chat-message mb-3">
-        <div class="fw-bold text-muted">ZapAI</div>
-          <div class="d-flex">
-              <div class="bg-light p-3 rounded border text-black">Hello, how can I assist you today?</div>
-          </div>
-      </div>
-      <div class="chat-message mb-3 text-end">
-        <div class="fw-bold text-muted">User</div>
-          <div class="d-flex justify-content-end">
-              <div class="bg-primary text-white p-3 rounded border">I have a question about my project.</div>
-          </div>
-      </div>
-      <!-- Additional messages would be placed here -->
-  </div>
+<div class="chat-container">
+  <div class="card flex-grow-1">
+    <div class="card-body messages-box">
+      <ul class="list-unstyled messages-list">
 
-  <!-- Input Area -->
-<div class="input-area mt-3">
-  <div class="input-group">
-      <input type="text" class="form-control" placeholder="Type your message..." style="height: 40px;">
-      <button class="btn btn-primary" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
-              <path d="M15.854 0.146a.5.5 0 0 0-.576-.073L.646 7.645a.5.5 0 0 0 .109.88l5.48 1.885L8.11 15.5a.5.5 0 0 0 .884-.09L15.927.72a.5.5 0 0 0-.073-.576zM6.232 8.334 2.1 6.933l9.121-4.564-4.99 5.965z"/>
-          </svg>
-      </button>
+        {% for chat in chats %}
+        {% if chat.user == request.user %}
+
+        <li class="message sent">
+          <div class="chat-message mb-3 text-end">
+            <div class="fw-bold text-muted">{{ user.username }}</div>
+              <div class="d-flex justify-content-end">
+                  <div class="bg-primary text-white p-3 rounded border">{{ chat.message }}</div>
+              </div>
+          </div>
+        </li>
+
+        <li class="message received">
+          <div class="chat-message mb-3">
+            <div class="fw-bold text-muted">ZapAI</div>
+              <div class="d-flex">
+                  <div class="bg-light p-3 rounded border text-black">{{ chat.response }}</div>
+              </div>
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
+  <br>
+  <form class="message-form">
+    {%csrf_token%}
+    <div class="input-area mt-3">
+      <div class="input-group">
+        <textarea class="form-control message-input" placeholder="Type your message..." style="height: 50px;"></textarea>
+        <button class="btn btn-primary" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                <path d="M15.854 0.146a.5.5 0 0 0-.576-.073L.646 7.645a.5.5 0 0 0 .109.88l5.48 1.885L8.11 15.5a.5.5 0 0 0 .884-.09L15.927.72a.5.5 0 0 0-.073-.576zM6.232 8.334 2.1 6.933l9.121-4.564-4.99 5.965z"/>
+            </svg>
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
-
 <script src="{% static 'script.js' %}"></script>
 {% endblock %}
