@@ -3,7 +3,9 @@ asgiref==3.8.1
 cachetools==5.4.0
 certifi==2024.7.4
 charset-normalizer==3.3.2
+crispy-bootstrap5==2024.2
 Django==5.0.7
+django-crispy-forms==2.3
 google-ai-generativelanguage==0.6.6
 google-api-core==2.19.1
 google-api-python-client==2.139.0
