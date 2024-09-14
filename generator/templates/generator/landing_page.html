@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Welcome to AI Content Generator{% endblock %}
+
+{% block content %}
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">Turn Ideas into Impact</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">ZapAI simplifies content creation and management with AI, generating and optimizing posts for social media and blogs. Elevate your online presence effortlessly with seamless integration and smart scheduling.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg px-4 me-sm-3" role="button">
+          Explore
+      </a>
+      
+      </div> 
+   </div>
+</div>
+<h2 class="text-center">Features</h2>
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg position-relative" style="background-image: url('{% static 'images/text.jpeg' %}'); border: 2px solid white;">
+      
+      <!-- Dark overlay -->
+      <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.8);"></div>
+  
+      <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 position-relative">
+        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">AI Content Generator</h3>
+        <ul class="d-flex list-unstyled mt-auto">
+          <li class="me-auto">
+            <img src="{% static 'images/text.jpeg' %}" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+          </li>
+          <li class="d-flex align-items-center me-3">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+            <small>Text</small>
+          </li>
+          <li class="d-flex align-items-center">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+            <small>Beta</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg position-relative" style="background-image: url('{% static 'images/image.jpeg' %}'); border: 2px solid white;">
+      
+      <!-- Dark overlay -->
+      <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.8);"></div>
+  
+      <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 position-relative">
+        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">AI Image Generator</h3>
+        <h6>Coming Soon...</h6>
+        <ul class="d-flex list-unstyled mt-auto">
+          <li class="me-auto">
+            <img src="{% static 'images/image.jpeg' %}" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+          </li>
+          <li class="d-flex align-items-center me-3">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+            <small>Image</small>
+          </li>
+          <li class="d-flex align-items-center">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+            <small>Alpha</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg position-relative" style="background-image: url('{% static 'images/video.jpeg' %}'); border: 2px solid white;">
+      
+      <!-- Dark overlay -->
+      <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.8);"></div>
+  
+      <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 position-relative">
+        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">AI video Generator</h3>
+        <h6>Coming Soon...</h6>
+        <ul class="d-flex list-unstyled mt-auto">
+          <li class="me-auto">
+            <img src="{% static 'images/video.jpeg' %}" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+          </li>
+          <li class="d-flex align-items-center me-3">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+            <small>Video</small>
+          </li>
+          <li class="d-flex align-items-center">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"></use></svg>
+            <small>Alpha</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<div class="my-5">
+<div class="p-5 text-center bg-body-tertiary">
+    <div class="container py-5">
+      <h1 class="text-body-emphasis">What's Different ?</h1>
+      <p class="col-lg-8 mx-auto lead">
+        Experience seamless integration with major social networks, including X (formerly Twitter), Instagram, LinkedIn, YouTube, TikTok, Pinterest, Facebook, and Snapchat. Elevate your content strategy, grow your audience, and maximize your online presence with ZapAI with features coming up in future. Create smarter, post stronger, and engage better—effortlessly.
+      </p>
+    </div>
+  </div>
+</div> 
+{% endblock %}

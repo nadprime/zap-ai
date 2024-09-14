@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2 class="d-flex justify-content-center align-items-center mb-4">Create Your Account</h2>
+<div class="square-container d-flex justify-content-center align-items-center">
+<form method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button class="btn btn-primary">Register</button>
+</form>
+</div>
+<br>
+<p class="d-flex justify-content-center align-items-center">Already have an account? <a href="{% url 'login' %}" class="mx-2">Login Here</a></p>
+{% endblock %}
