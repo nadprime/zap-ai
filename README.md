@@ -2,6 +2,9 @@
 
 ZapAI is a Django-based web application designed to help you create engaging and high-quality content for various platforms. It offers a wide range of tools to simplify your content creation process.
 
+## Video Demo:
+YouTube Link: https://youtu.be/VyPHDjO_ggA
+
 ### Features:
 
 * **Blog Generator:**  Quickly generate blog posts with various topics and styles.
